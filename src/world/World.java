@@ -16,7 +16,7 @@ public class World {
 	public World(Handler handler, String path){
 		this.handler = handler;
 		loadWorld(path);
-			}
+	}
 	
 	public void tick(){
 		

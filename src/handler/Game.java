@@ -19,23 +19,16 @@ public class Game implements Runnable {
 	private Display display;
 	private int width, height;
 	public String title;
-	
 	private boolean running = false;
 	private Thread thread;
-	
-	
 	private BufferStrategy bs;
 	private Graphics g;
-	
 	private State gameState;
 	private State menuState;
-	
 	private KeyManager keyManager;
 	//private BufferedImage testImage;
 	//private SpriteSheet sheet;
-	
 	private GameCamera gameCamera;
-	
 	private Handler handler;
 	
 	public Game(String title, int width, int height){
@@ -51,8 +44,8 @@ public class Game implements Runnable {
 		Assets.init();
 		
 		gameCamera = new GameCamera(this, 0,0);
+
 		handler = new Handler(this);
-		
 		gameState = new GameState(handler);
 		menuState = new MenuState(handler);
 		State.setState(gameState);
